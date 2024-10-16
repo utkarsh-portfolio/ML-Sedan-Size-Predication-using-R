@@ -3,7 +3,7 @@ library(tidyverse)
 library(class)
 
 # Set the working directory to your Lab04 folder 
-setwd("C:/Users/DELL/RLabs")
+setwd("path/of/working_directory")
 
 # Read SedanSize.csv into a tibble called sedanSize 
 sedanSize <- read_csv(file = "SedanSize.csv",
