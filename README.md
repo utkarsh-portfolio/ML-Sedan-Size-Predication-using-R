@@ -16,20 +16,24 @@ SedanSize.csv: The dataset used for training and testing the model.
 #### Data Loading and Exploration:
 
 1. The SedanSize.csv dataset is loaded into a tibble.
-Initial exploration is done by printing the dataset structure and summary.
-Data Cleaning:
+2. Initial exploration is done by printing the dataset structure and summary.
 
-2. The MakeModel feature is removed as it is not required for the prediction task.
-The dataset is split into two: one containing the label (SedanSize) and another containing the predictor variables.
-Visualization:
+#### Data Cleaning:
 
-3. The script includes a function displayAllHistograms() to plot histograms of all numerical features in the dataset to help understand data distribution.
-Data Splitting:
+3. The MakeModel feature is removed as it is not required for the prediction task.
+4. The dataset is split into two: one containing the label (SedanSize) and another containing the predictor variables.
 
-4. A random 75% sample of the data is taken as the training set, with the rest reserved for testing.
-Model Training and Prediction:
+#### Visualization:
 
-5. The KNN algorithm is applied to the training set to predict sedan sizes.
+5. The script includes a function displayAllHistograms() to plot histograms of all numerical features in the dataset to help understand data distribution.
+
+#### Data Splitting:
+
+6. A random 75% sample of the data is taken as the training set, with the rest reserved for testing.
+   
+#### Model Training and Prediction:
+
+7. The KNN algorithm is applied to the training set to predict sedan sizes.
 
 #### Running the Script
 1. Set your working directory to the folder containing the script and the dataset.
