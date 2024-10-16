@@ -40,6 +40,20 @@ Model Training and Prediction:
 2. Ensure the dataset SedanSize.csv is available in the working directory.
 
 
+#### Here are few important output results - 
 
-Summary of the Raw data is given in the below image 
+Summary of the Raw data - 
 ![image](https://github.com/user-attachments/assets/aa7e953d-4a30-464d-a9ba-c7369f6681a6)
+
+Confusion Maxtrix
+![image](https://github.com/user-attachments/assets/6ac42e2a-98ee-4955-9155-e64075c588d6)
+
+Final Output of K Value Matrix
+![image](https://github.com/user-attachments/assets/997e71e9-8218-48f7-9a50-4b256d5a6eca)
+
+The best value for k is 1, 3, 5, 7, 9, or 15 as they all yield the highest predictive accuracy of 0.8571.
+
+This model can help an automobile manufacturer predict the size of a sedan (e.g., small, medium, large) based on features like price, road test score, and reliability, enabling the optimization of vehicle designs based on these parameters.
+
+
+
