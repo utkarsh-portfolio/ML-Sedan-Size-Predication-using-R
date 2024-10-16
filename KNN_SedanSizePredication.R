@@ -2,7 +2,7 @@
 library(tidyverse)
 library(class)
 
-# Set the working directory to your Lab04 folder 
+# Set the working directory to your desired folder 
 setwd("path/of/working_directory")
 
 # Read SedanSize.csv into a tibble called sedanSize 
@@ -22,8 +22,7 @@ summary(sedanSize)
 # Remove the MakeModel feature from the tibble 
 sedanSize <- sedanSize %>% select(-MakeModel)
 
-# Separate the tibble into two. One with just the label and one with the other 
-# variables
+# Separate the tibble into two distinct tibbles. One with just the label feature and one with the other remaining features
 sedanSizeLabels <- sedanSize %>% select(SedanSize)
 sedanSize <- sedanSize %>% select(-SedanSize)
 
@@ -61,8 +60,7 @@ sedanSizeTesting <- sedanSize[-sampleSet,]
 # Put the records from the 75% sample into sedanSizeTestingLabels
 sedanSizeTestingLabels <- sedanSizeLabels[-sampleSet,]
 
-#kNN model using sedanSizeTraining as the train argument, 
-#sedanSizeTesting as the test argument
+# kNN model using sedanSizeTraining as the train argument, sedanSizeTesting as the test argument
 sedanSizePrediction <- knn(train = sedanSizeTraining,
                            test = sedanSizeTesting,
                            cl = sedanSizeTrainingLabels$SedanSize,
@@ -81,8 +79,7 @@ sedanSizeConfusionMatrix <- table(sedanSizeTestingLabels$SedanSize,
 # Display the confusion matrix on the console 
 print(sedanSizeConfusionMatrix)
 
-# Calculate the model predictive accuracy and store it into a variable 
-# called predictiveAccuracy 
+# Calculate the model predictive accuracy and store it into a variable called predictiveAccuracy 
 predictiveAccuracy <- sum(diag(sedanSizeConfusionMatrix)) / 
                           nrow(sedanSizeTesting)
 
@@ -98,8 +95,8 @@ kValueMatrix <- matrix(data = NA,
 colnames(kValueMatrix) <- c("kvalue", "predictive accuracy") 
 
 # Loop through odd values of k from 1 up to the number of records in the 
-#training dataset. With each pass through the loop, store the k-value along with 
-#its predictive accuracy
+# training dataset. With each pass through the loop, store the k-value along with 
+# its predictive accuracy
 for (kValue in 1:nrow(sedanSizeTraining)) {
   if(kValue %% 2 != 0) {
     sedanSizePrediction <- knn(train = sedanSizeTraining,
