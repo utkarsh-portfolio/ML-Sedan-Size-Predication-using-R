@@ -41,6 +41,9 @@ Model Training and Prediction:
 Summary of the Raw data - 
 ![image](https://github.com/user-attachments/assets/aa7e953d-4a30-464d-a9ba-c7369f6681a6)
 
+Histogram to understand the distribution of key features
+![image](https://github.com/user-attachments/assets/e9586a91-2098-4bfb-a75a-ac947e5f5419)
+
 Confusion Maxtrix -
 ![image](https://github.com/user-attachments/assets/6ac42e2a-98ee-4955-9155-e64075c588d6)
 
