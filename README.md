@@ -1,4 +1,4 @@
-## KNN Sedan Size Prediction
+## Sedan Size Prediction using KNN Algorithm
 
 This project demonstrates the use of the K-Nearest Neighbors (KNN) algorithm in R to predict the size of sedans based on a given dataset (SedanSize.csv). The script processes the data, visualizes key features, and builds a predictive model using the KNN method.
 
